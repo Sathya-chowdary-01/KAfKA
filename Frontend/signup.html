@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - KAfKA</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+
+        <form class="signup-form" onsubmit="return validatePassword()">
+            
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter a strong password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+            </div>
+
+            <p id="errorText"></p>
+
+            <button type="submit" class="signup-btn">Create Account</button>
+
+            <p class="login-text">
+                Already have an account? <a href="login.html">Login</a>
+            </p>
+        </form>
+    </div>
+
+<script>
+function validatePassword() {
+    let pass = document.getElementById("password").value;
+    let confirmPass = document.getElementById("confirmPassword").value;
+    let errorText = document.getElementById("errorText");
+
+    if (pass !== confirmPass) {
+        errorText.textContent = "Passwords do not match!";
+        errorText.style.color = "#ffb3b3";
+        return false; 
+    }
+
+    errorText.textContent = ""; 
+    return true;
+}
+</script>
+
+</body>
+</html>

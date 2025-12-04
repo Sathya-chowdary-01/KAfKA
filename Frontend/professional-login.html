@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Professional Login | KAfKA</title>
+    <link rel="stylesheet" href="professional-login.css">
+</head>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+    function handleCredentialResponse(response) {
+        // Decode JWT
+        const data = jwt_decode(response.credential);
+
+        console.log("Google Login Success:", data);
+
+        // Redirect to dashboard
+        window.location.href = "professional-dashboard.html";
+
+    }
+
+    window.onload = function () {
+        google.accounts.id.initialize({
+            client_id: "122987114130-35840bu49gl0rqn1jeokhorqoh3e0bvk.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+        });
+
+        google.accounts.id.renderButton(
+            document.getElementById("google-btn"),
+            { theme: "outline", size: "large" }
+        );
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
+<body>
+
+    <div class="navbar">
+        <div class="nav-right">
+            <a href="#">Help</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">Professional Login</h1>
+
+        <div class="login-box">
+
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+
+            <button class="login-btn">Login</button>
+
+            <p class="signup-text">
+                Don't have an account? 
+                <a href="signup.html">Create Account</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

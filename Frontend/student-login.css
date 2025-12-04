@@ -1,0 +1,112 @@
+/* Gradient Background */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-right a {
+    margin-left: 25px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-right a:hover {
+    opacity: 0.8;
+}
+
+/* Center Container */
+.container {
+    text-align: center;
+    width: 380px;
+}
+
+.title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Glass Login Box */
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Buttons */
+.google-btn, .fb-btn, .login-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-btn img,
+.fb-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.google-btn {
+    background: #ffffff;
+}
+
+.fb-btn {
+    background: #1877f2;
+    color: white;
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.or {
+    color: white;
+    margin: 10px 0;
+}
+
+.signup-text {
+    margin-top: 10px;
+    color: white;
+}
+
+.signup-text a {
+    color: #ffe4ff;
+}
